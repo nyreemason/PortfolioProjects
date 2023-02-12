@@ -18,6 +18,7 @@ FROM new_product.orders
 GROUP BY MONTHNAME(order_date);-- After running this query, the units_sold table has been validated
 
 
+-- Compiling a quarterly sales statement. 
 SELECT 
     QUARTER(order_date) AS quarter,
     COUNT(customer_id) AS num_of_customers,
